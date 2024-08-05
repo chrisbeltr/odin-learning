@@ -8,7 +8,7 @@ h1 {
     font-size: 3em;
 }
 
-p, a {
+p, a.normal {
     font-size: 1.5em;
 }
 
