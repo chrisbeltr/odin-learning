@@ -1,3 +1,3 @@
 # odin-learning
 
-yippee
+now live at: https://odin.borks.dev
