@@ -6,11 +6,8 @@ body {
     background-color: #ffc0cb;
     color: white;
     margin: 0;
+    padding: 5px;
     height: 100%;
-}
-
-header {
-    margin: 5px;
 }
 
 .recipe {
