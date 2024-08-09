@@ -7,17 +7,24 @@ body {
     color: white;
     margin: 0;
     padding: 5px;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: none;
 }
 
 .recipe {
+    flex: auto;
     background-color: #e5aab5;
-    border-radius: 5px;
-    margin: 0 auto;
+    border-radius: 7.5px;
+    min-width: 600px;
     max-width: 1000px;
-    min-width: max-content;
-    height: 100%;
-    padding: 1px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
 }
 
 .title {
@@ -38,4 +45,12 @@ a {
 .recipe .recipe-child {
     width: fit-content;
     margin: 10px auto;
+}
+
+.recipe .recipe-child:first-child {
+    margin-top: 0;
+}
+
+.recipe .recipe-child:last-child {
+    margin-bottom: 0;
 }
