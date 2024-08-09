@@ -1,17 +1,44 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #ffc0cb;
     color: white;
+    margin: 0;
+    height: 100%;
 }
 
-h1 {
+header {
+    margin: 5px;
+}
+
+.recipe {
+    background-color: #e5aab5;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: max-content;
+    height: 100%;
+    padding: 1px;
+}
+
+.title {
     font-family: "Dancing Script", cursive;
     font-size: 3em;
 }
 
-p, a.normal {
+.body-size {
     font-size: 1.5em;
 }
 
 a {
     color: #cc99a2;
+    display: inline-block;
+    width: fit-content;
+}
+
+.recipe .recipe-child {
+    width: fit-content;
+    margin: 10px auto;
 }
