@@ -150,6 +150,8 @@ body {
 .panels {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .panel {
@@ -166,22 +168,6 @@ body {
     width: 170px;
     border: 5px solid var(--button);
     border-radius: 15px;
-}
-
-.panel-image .one {
-
-}
-
-.panel-image .two {
-
-}
-
-.panel-image .three {
-    
-}
-
-.panel-image .four {
-
 }
 
 .panel-text {
@@ -205,6 +191,7 @@ body {
     padding: 50px 100px;
     border-radius: 10px;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .call-to-action .button {
