@@ -1,3 +1,5 @@
 # odin-learning
 
-now live at: https://odin.borks.dev (though if you're seeing this, you already knew that ;3)
+this is just my webdev learning repository, it will be messy :3
+
+now live at: https://odin.borks.dev
