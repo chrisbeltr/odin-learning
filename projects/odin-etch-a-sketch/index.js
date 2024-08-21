@@ -1,5 +1,6 @@
 let body = document.querySelector("body");
 let container = document.querySelector("#container");
+container.style.border = "1px solid black";
 let dimensions = Math.min(container.offsetHeight, body.offsetWidth - 20);
 container.style.height = `${dimensions}px`;
 container.style.width = `${dimensions}px`;
