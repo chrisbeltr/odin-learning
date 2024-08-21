@@ -36,3 +36,11 @@ sizeButton.addEventListener("click", () => {
     } while (size > 100);
     makeGrid(size);
 })
+
+let clearButton = document.querySelector("#clearButton");
+clearButton.addEventListener("click", () => {
+    let children = container.children;
+    for (let i = 0; i < children.length; i++) {
+        children[i].style.removeProperty("background-color");
+    }
+});
