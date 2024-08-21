@@ -9,7 +9,8 @@ function getHumanChoice() {
     return prompt("choose rock, paper, or scissors: ");
 }
 
-let humanScore = computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     switch (humanChoice.toLowerCase()) {
@@ -64,13 +65,38 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+let rockButton = document.createElement("button");
+rockButton.textContent = "Rock";
+rockButton.addEventListener("click", () => buttonClick("rock"));
+let paperButton = document.createElement("button");
+paperButton.textContent = "Paper";
+paperButton.addEventListener("click", () => buttonClick("paper"));
+let scissorsButton = document.createElement("button");
+scissorsButton.textContent = "Scissors";
+scissorsButton.addEventListener("click", () => buttonClick("scissors"));
 
-        playRound(humanSelection, computerSelection);
+let scoreText = document.createElement("div");
+scoreText.textContent = "Computer score: 0 | Human score: 0"
+
+let winnerText = document.createElement("div");
+
+let body = document.querySelector("body");
+body.append(rockButton, paperButton, scissorsButton, scoreText, winnerText);
+
+function buttonClick(choice) {
+    playRound(choice, getComputerChoice());
+
+    scoreText.textContent = `Computer score: ${computerScore} | Human score: ${humanScore}`;
+
+    function winState(winner) {
+        winnerText.textContent = `${winner} wins!`
+        rockButton.setAttribute("disabled", true);
+        paperButton.setAttribute("disabled", true);
+        scissorsButton.setAttribute("disabled", true);
     }
-    console.log("Computer score: " + computerScore + "\nHuman score: " + humanScore);
-    if (humanScore > computerScore) console.log("Human wins!"); else console.log("Computer wins!");
+    if (computerScore >= 5) {
+        winState("Computer");
+    } else if (humanScore >= 5) {
+        winState("Human");
+    }
 }
