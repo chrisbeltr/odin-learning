@@ -139,8 +139,7 @@ function componentToHex(c) {
 
 function rgbToHex(rgb) {
     rgb = rgb.substring(4, rgb.length - 1);
-    rgb = rgb.split(",");
-    rgb.forEach(element => element.trim());
+    rgb = rgb.split(", ");
     var [r, g, b] = rgb;
     return "#" + componentToHex(Number.parseInt(r)) + componentToHex(Number.parseInt(g)) + componentToHex(Number.parseInt(b));
 }
