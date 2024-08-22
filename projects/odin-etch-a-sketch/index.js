@@ -8,9 +8,11 @@ let mode = "draw";
 let body = document.querySelector("body");
 let container = document.querySelector("#container");
 container.style.border = "1px solid black";
+container.style.flexGrow = 1;
 let dimensions = Math.min(container.offsetHeight, body.offsetWidth - 20);
 container.style.height = `${dimensions}px`;
 container.style.width = `${dimensions}px`;
+container.style.flexGrow = 0;
 
 // event listener initialization
 let sizeButton = document.querySelector("#sizeButton");
