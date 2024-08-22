@@ -26,9 +26,28 @@
             flex-shrink: 0;
         }
 
-        .buttons {
+        .functions {
             display: flex;
             gap: 10px;
+            align-items: center;
+        }
+
+        .label {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            align-self: stretch;
+        }
+
+        .mode {
+            display: flex;
+            margin: 0;
+            align-items: center;
+        }
+
+        .mode button {
+            margin: 0 5px;
         }
 
         .grid-square {
@@ -42,10 +61,21 @@
 </head>
 
 <body>
-    <div class="buttons">
+    <div class="functions">
         <button id="sizeButton">Change size</button>
         <button id="borderButton">Hide grid lines</button>
         <button id="clearButton">Clear grid</button>
+        <label class="label" for="colorPicker">Color:
+            <input id="colorPicker" type="color">
+        </label>
+        <label class="label" for="randomCheckbox">Random color:
+            <input id="randomCheckbox" type="checkbox" style="margin: 0;">
+        </label>
+        <p class="mode">Mode:
+            <button id="drawButton">Draw</button>
+            <button id="eraseButton">Erase</button>
+            <button id="colorpickButton">Color pick</button>
+        </p>
     </div>
     <div id="container"></div>
     <script src="./index.js"></script>
