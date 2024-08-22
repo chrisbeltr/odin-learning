@@ -9,15 +9,48 @@ let random = false;
 let color = "black";
 let mode = "draw";
 
-let randomCheckbox = document.querySelector("#randomCheckbox");
+let sizeButton = document.querySelector("#sizeButton");
+sizeButton.addEventListener("click", () => {
+    let size = 0;
+    do {
+        size = Number.parseInt(window.prompt("Please input the new box dimensions. (max. 100)", "4"));
+    } while (size > 100);
+    makeGrid(size);
+});
+
+let borderButton = document.querySelector("#borderButton");
+borderButton.addEventListener("click", () => {
+    let children = container.children;
+    for (let i = 0; i < children.length; i++) {
+        if (border) {
+            children[i].style.removeProperty("border");
+            borderButton.textContent = "Show grid lines";
+        } else {
+            children[i].style.border = "1px solid lightgray";
+            borderButton.textContent = "Hide grid lines";
+        }
+    }
+    border = !border;
+});
+
+let clearButton = document.querySelector("#clearButton");
+clearButton.addEventListener("click", () => {
+    let children = container.children;
+    for (let i = 0; i < children.length; i++) {
+        children[i].style.removeProperty("background-color");
+    }
+});
+
 let colorPicker = document.querySelector("#colorPicker");
 colorPicker.addEventListener("change", () => {
     color = colorPicker.value;
-})
+});
+
+let randomCheckbox = document.querySelector("#randomCheckbox");
 randomCheckbox.addEventListener("change", () => {
     random = randomCheckbox.checked;
     colorPicker.disabled = random;
-})
+});
 
 let drawButton = document.querySelector("#drawButton");
 drawButton.disabled = true;
@@ -71,38 +104,6 @@ function makeGrid(size) {
 }
 
 makeGrid(4);
-
-let sizeButton = document.querySelector("#sizeButton");
-sizeButton.addEventListener("click", () => {
-    let size = 0;
-    do {
-        size = Number.parseInt(window.prompt("Please input the new box dimensions. (max. 100)", "4"));
-    } while (size > 100);
-    makeGrid(size);
-})
-
-let clearButton = document.querySelector("#clearButton");
-clearButton.addEventListener("click", () => {
-    let children = container.children;
-    for (let i = 0; i < children.length; i++) {
-        children[i].style.removeProperty("background-color");
-    }
-});
-
-let borderButton = document.querySelector("#borderButton");
-borderButton.addEventListener("click", () => {
-    let children = container.children;
-    for (let i = 0; i < children.length; i++) {
-        if (border) {
-            children[i].style.removeProperty("border");
-            borderButton.textContent = "Show grid lines";
-        } else {
-            children[i].style.border = "1px solid lightgray";
-            borderButton.textContent = "Hide grid lines";
-        }
-    }
-    border = !border;
-})
 
 // helpers
 function componentToHex(c) {
