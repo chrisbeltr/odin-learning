@@ -1,14 +1,18 @@
+// setup variables
+let border = true;
+let random = false;
+let color = "black";
+let mode = "draw";
+
+// container initialization
 let body = document.querySelector("body");
 let container = document.querySelector("#container");
 container.style.border = "1px solid black";
 let dimensions = Math.min(container.offsetHeight, body.offsetWidth - 20);
 container.style.height = `${dimensions}px`;
 container.style.width = `${dimensions}px`;
-let border = true;
-let random = false;
-let color = "black";
-let mode = "draw";
 
+// event listener initialization
 let sizeButton = document.querySelector("#sizeButton");
 sizeButton.addEventListener("click", () => {
     let size = 0;
@@ -59,6 +63,8 @@ let colorpickButton = document.querySelector("#colorpickButton");
 drawButton.addEventListener("click", () => { mode = "draw"; drawButton.disabled = true; eraseButton.disabled = false; colorpickButton.disabled = false; });
 eraseButton.addEventListener("click", () => { mode = "erase"; drawButton.disabled = false; eraseButton.disabled = true; colorpickButton.disabled = false; });
 colorpickButton.addEventListener("click", () => { mode = "colorpick"; drawButton.disabled = false; eraseButton.disabled = false; colorpickButton.disabled = true; });
+
+// grid functionality
 function gridClickHandler(event, square) {
     if (event.buttons != 1) return;
     if (mode == "draw") {
@@ -103,6 +109,7 @@ function makeGrid(size) {
     }
 }
 
+// default grid
 makeGrid(4);
 
 // helpers
