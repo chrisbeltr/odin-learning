@@ -1,4 +1,5 @@
 // setup variables
+let gridSize = 4;
 let border = true;
 let random = false;
 let color = "black";
@@ -8,20 +9,36 @@ let mode = "draw";
 let body = document.querySelector("body");
 let container = document.querySelector("#container");
 container.style.border = "1px solid black";
-container.style.flexGrow = 1;
-let dimensions = Math.min(container.offsetHeight, body.offsetWidth - 20);
-container.style.height = `${dimensions}px`;
-container.style.width = `${dimensions}px`;
-container.style.flexGrow = 0;
+let dimensions = 0;
+function resizeContainer() {
+    container.style.removeProperty("height");
+    container.style.removeProperty("width");
+    container.style.flexGrow = 1;
+    dimensions = Math.min(container.offsetHeight, body.offsetWidth - 20);
+    container.style.height = `${dimensions}px`;
+    container.style.width = `${dimensions}px`;
+    container.style.flexGrow = 0;
+    resizeGrid();
+}
+function resizeGrid() {
+    let children = container.children;
+    for (let i = 0; i < children.length; i++) {
+        let square = children[i];
+        let squareDimensions = dimensions / gridSize;
+        square.style.height = `${squareDimensions}px`;
+        square.style.width = `${squareDimensions}px`;
+    }
+}
+resizeContainer();
+window.addEventListener("resize", resizeContainer);
 
 // event listener initialization
 let sizeButton = document.querySelector("#sizeButton");
 sizeButton.addEventListener("click", () => {
-    let size = 0;
     do {
-        size = Number.parseInt(window.prompt("Please input the new box dimensions. (max. 100)", "4"));
-    } while (size > 100);
-    makeGrid(size);
+        gridSize = Number.parseInt(window.prompt("Please input the new box dimensions. (max. 100)", "4"));
+    } while (gridSize > 100);
+    makeGrid(gridSize);
 });
 
 let borderButton = document.querySelector("#borderButton");
@@ -112,7 +129,7 @@ function makeGrid(size) {
 }
 
 // default grid
-makeGrid(4);
+makeGrid(gridSize);
 
 // helpers
 function componentToHex(c) {
