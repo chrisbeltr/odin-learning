@@ -14,6 +14,11 @@ function makeGrid(size) {
         square.style.width = `${squareDimensions}px`;
         square.style.userSelect = "none";
         square.setAttribute("class", "grid-square");
+        // function returnColor() {
+        //     return `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
+        //     // unpleasant gradient: #25d529, #fe32f0, #9f5101
+        //     // return "linear-gradient(#25d529 0%, #fe32f0 50%, #9f5101 100%";
+        // }
         square.addEventListener("mouseover", (event) => {
             if (event.buttons == 1) {
                 square.style.backgroundColor = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
