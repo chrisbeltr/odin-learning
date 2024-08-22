@@ -4,6 +4,7 @@ container.style.border = "1px solid black";
 let dimensions = Math.min(container.offsetHeight, body.offsetWidth - 20);
 container.style.height = `${dimensions}px`;
 container.style.width = `${dimensions}px`;
+let border = true;
 
 function makeGrid(size) {
     container.replaceChildren([]);
@@ -12,6 +13,7 @@ function makeGrid(size) {
         let squareDimensions = dimensions / size;
         square.style.height = `${squareDimensions}px`;
         square.style.width = `${squareDimensions}px`;
+        if (border) square.style.border = "1px solid lightgray";
         square.style.userSelect = "none";
         square.setAttribute("class", "grid-square");
         // function returnColor() {
@@ -49,3 +51,18 @@ clearButton.addEventListener("click", () => {
         children[i].style.removeProperty("background-color");
     }
 });
+
+let borderButton = document.querySelector("#borderButton");
+borderButton.addEventListener("click", () => {
+    let children = container.children;
+    for (let i = 0; i < children.length; i++) {
+        if (border) {
+            children[i].style.removeProperty("border");
+            borderButton.textContent = "Show grid lines";
+        } else {
+            children[i].style.border = "1px solid lightgray";
+            borderButton.textContent = "Hide grid lines";
+        }
+    }
+    border = !border;
+})

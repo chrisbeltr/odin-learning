@@ -26,6 +26,11 @@
             flex-shrink: 0;
         }
 
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
         .grid-square {
             box-sizing: border-box;
         }
@@ -39,6 +44,7 @@
 <body>
     <div class="buttons">
         <button id="sizeButton">Change size</button>
+        <button id="borderButton">Hide grid lines</button>
         <button id="clearButton">Clear grid</button>
     </div>
     <div id="container"></div>
