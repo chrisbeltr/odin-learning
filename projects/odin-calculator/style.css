@@ -1,0 +1,139 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.cdnfonts.com/css/seven-segment");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.case {
+  padding: 40px;
+  width: 500px;
+  height: 700px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.display {
+  height: 75px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.display-text {
+  text-align: right;
+  width: 95%;
+
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.buttons {
+  margin-left: -5px;
+  width: 425px;
+  height: 525px;
+
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 20px;
+}
+
+.button {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+
+  user-select: none;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:active {
+  margin-left: 5px;
+  margin-right: -5px;
+
+  box-shadow: none;
+}
+
+/* looks */
+.display {
+  background-color: #d7b5c6;
+  color: #ca768c;
+
+  font-family: "Seven Segment", monospace;
+  font-size: 55px;
+}
+
+.button {
+  color: #b1687c;
+
+  /* Barlow, Dosis, Montserrat */
+  font-family: "Barlow", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.number {
+  background-color: #eac3d6;
+  box-shadow: 5px 5px #db8aab, 7px 7px 10px 2px #8d2a40;
+}
+.number:hover {
+  background-color: #dcb7ca;
+}
+
+.function {
+  color: #a46072;
+  background-color: #e36ea6;
+  box-shadow: 5px 5px #ce1967, 7px 7px 10px 2px #8d2a40;
+  font-style: italic;
+}
+.function:hover {
+  background-color: #d6679b;
+}
+
+.operation {
+  background-color: #e4acc9;
+  box-shadow: 5px 5px #b65f7c, 7px 7px 10px 2px #8d2a40;
+}
+.operation:hover {
+  background-color: #d7a1bd;
+}
+
+.case {
+  background: #f3d0e2;
+}
+
+/* modifiers */
+.long {
+  width: calc(180px + 20px);
+}
+
+.not-italic {
+  font-style: normal;
+}
