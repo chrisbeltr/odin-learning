@@ -40,6 +40,10 @@ function buttonClick(event) {
   }
 
   if (operation == "%") {
+    if (displayNumber == "80085") {
+      displayText = "haha funi";
+      reset();
+    }
     displayNumber = `${Number.parseFloat(displayNumber) / 100}`;
     updateDisplay();
     return;
