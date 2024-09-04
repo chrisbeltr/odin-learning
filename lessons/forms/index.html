@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form action="./index.html" method="post">
+        <fieldset style="display: flex; flex-direction: column; max-width: max-content; gap: 10px;">
+            <legend>form</legend>
+            <label for="text">text: <input type="text" name="text" id="text" placeholder="name :bangbang:"></label>
+            <label for=" check">check:<input type="checkbox" name="check" id="check"></label>
+            <label for="area" style="display:flex; gap: 5px;">area:
+                <textarea name="area" id="area" cols="30" rows="5" placeholder="wh" style="font: 1em serif;"></textarea>
+            </label>
+            <label for="select"> yuh:
+                <select name="select" id="select">
+                    <option value="none">-- Please select an option: --</option>
+                    <optgroup label="first four">
+                        <option value="1">one</option>
+                        <option value="2">two</option>
+                        <option value="3">three</option>
+                        <option value="4">four</option>
+                    </optgroup>
+                    <optgroup label="last three">
+                        <option value="5">five</option>
+                        <option value="6">six</option>
+                        <option value="7">seven</option>
+                    </optgroup>
+                </select>
+            </label>
+            <fieldset style="display: flex; flex-direction: column;">
+                <legend>radio buttons:</legend>
+                <label for="one"><input type="radio" name="radio" id="one">one</label>
+                <label for="two"><input type="radio" name="radio" id="two">two</label>
+                <label for="three"><input type="radio" name="radio" id="three">three</label>
+                <label for="four"> <input type="radio" name="radio" id="four">four</label>
+            </fieldset>
+            <button type="submit" style="width: 50%; align-self: center;">Submit</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
