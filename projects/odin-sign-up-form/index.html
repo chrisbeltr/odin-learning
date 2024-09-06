@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Sign-up Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-container">
+            <span class="title">ODIN</span>
+            <div class="credit">Photo by <a
+                    href="https://unsplash.com/@francesco_ungaro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Francesco
+                    Ungaro</a> on <a
+                    href="https://unsplash.com/photos/a-beach-with-two-boats-on-it-next-to-the-ocean-5tgQb5abXeQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="top-section">
+                <h2 class="bold-text">Go on. <wbr>Sign up. <wbr>I'm waiting.</h2>
+            </div>
+            <div class="middle-section">
+                <form action="#" method="get" id="sign-up">
+                    <h2 class="bold-text">Hurry up.</h2>
+                    <div class="text-fields">
+                        <div class="text-field">
+                            <label for="firstname">First Name</label><input type="text" id="firstname" name="firstname"
+                                placeholder="John">
+                        </div>
+                        <div class="text-field">
+                            <label for="lastname">Last Name</label><input type="text" id="lastname" name="lastname"
+                                placeholder="Doe">
+                        </div>
+                        <div class="text-field">
+                            <label for="email">Email</label><input type="email" id="email" name="email"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="text-field">
+                            <label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"
+                                pattern="([0-9]{3}-[0-9]{3}-[0-9]{4})" placeholder="123-456-7890">
+                        </div>
+                        <div class="text-field">
+                            <label for="pass">Password</label><input type="password" id="pass" name="pass"
+                                placeholder="*********">
+                        </div>
+                        <div class="text-field">
+                            <label for="confirm">Confirm Password</label><input type="password" id="confirm"
+                                name="confirm" placeholder="*********">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bottom-section">
+                <button type="submit" form="sign-up">Sign up</button>
+                <p>Already signed up? <a href="#">Log in.</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
