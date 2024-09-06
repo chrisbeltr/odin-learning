@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0;
 
+  height: max-content;
+  width: max-content;
+
   font-family: "Work Sans", sans-serif;
 }
 
@@ -89,7 +92,7 @@ body {
 .top-section {
   box-sizing: border-box;
   height: 100%;
-  text-wrap: nowrap;
+  /* text-wrap: nowrap; */
 
   background-color: #08a7a74d;
 
@@ -236,6 +239,12 @@ a:active {
   color: #097772;
 }
 
+@media (max-width: 300px) {
+  .container {
+    min-width: min-content;
+  }
+}
+
 @media (max-width: 920px) {
   .container {
     flex-direction: column;
@@ -265,5 +274,7 @@ a:active {
     position: static;
 
     overflow: initial;
+    /* overflow-y: initial; */
+    /* overflow-x: hidden; */
   }
 }
