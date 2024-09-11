@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 5px;
+
+  background-color: black;
+  color: white;
+  font-family: "Roboto Slab", "Times New Roman";
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: 25px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 10px;
+}
+
+.title {
+  font-size: 15rem;
+  font-weight: 700;
+  line-height: 11.7rem;
+
+  color: red;
+}
+
+.links-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  column-gap: 25px;
+}
+
+.links-container > span {
+  font-size: 3rem;
+  line-height: 2rem;
+  padding: 15px;
+}
+
+.links-container > span:hover {
+  background-color: #ffffff30;
+}
+
+.body {
+  flex-grow: 1;
+
+  align-self: center;
+  text-align: center;
+}
+
+.header {
+  font-size: 3rem;
+  color: pink;
+}
+
+.footer {
+  align-self: center;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(206, 99, 0);
+}
+
+a:hover {
+  color: rgb(255, 123, 0);
+}
+
+a:active {
+  color: rgb(124, 60, 0);
+}
+
+@media (min-width: 2000px) {
+  body {
+    font-size: 1.7rem;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 25rem;
+    line-height: 20rem;
+  }
+
+  .links-container > span {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .header {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    row-gap: 0;
+    column-gap: 10px;
+  }
+
+  .header {
+    column-gap: 10px;
+  }
+
+  .title {
+    font-size: 6.3rem;
+    line-height: 5.3rem;
+  }
+
+  .links-container {
+    column-gap: 10px;
+  }
+
+  .links-container > span {
+    font-size: 1.8rem;
+    padding: 3px;
+  }
+
+  .header {
+    font-size: 1.8rem;
+  }
+}
