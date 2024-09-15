@@ -230,7 +230,7 @@ body {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  grid-auto-rows: 1fr;
+  grid-auto-rows: 220px;
 }
 
 /* card */
@@ -251,14 +251,21 @@ body {
 
 .card-text {
   padding: 20px;
+  overflow: hidden;
 
   font-size: 1rem;
 
   /* i got lazy ok ;-; */
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1.3em 1fr;
   gap: 5px;
 }
+
+/* 
+.card-text > .title,
+.card-text > .description {
+  text-overflow: ellipsis;
+} */
 
 .title {
   font-size: 1.15em;
