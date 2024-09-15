@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  grid-template: 50px 50px / 50px 50px;
+  gap: 1px;
+}
+
+.container div {
+  border: 1px solid blue;
+}
+
+.hi {
+  padding: 5px;
+  background-color: aqua;
+}
+
+.grid-container {
+  box-sizing: content-box;
+  resize: both;
+  overflow: auto;
+  display: grid;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid grey;
+  background-color: skyblue;
+  grid-template-rows: repeat(2, clamp(150px, 40%, 250px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.grid-item {
+  background-color: #444;
+  text-align: center;
+  color: #ddd;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  padding: 12px;
+}
+
+p {
+  margin: 12px auto 24px;
+}
+
+img {
+  height: 60px;
+}
