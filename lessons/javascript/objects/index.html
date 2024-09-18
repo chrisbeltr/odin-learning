@@ -24,6 +24,10 @@
                 <label for="author">Author</label>
                 <input type="text" name="author" id="author">
             </div>
+            <div class="text-input">
+                <label for="pages">Pages</label>
+                <input type="number" name="pages" id="pages">
+            </div>
             <div class="checkbox-input">
                 <input type="checkbox" name="read" id="read">
                 <label for="read">Read?</label>
@@ -34,8 +38,11 @@
     <div class="background-darken"></div>
     <div class="book-grid" id="book-grid">
         <div class="book" id="book-default">
-            <div class="text title">No books yet...</div>
-            <div class="text author">Add one by clicking "Add new book"</div>
+            <div class="book-text">
+                <div class="text title">No books yet...</div>
+                <div class="text author">Add one by clicking "Add new book"</div>
+            </div>
+            <div class="text pages">248 pages</div>
             <div class="exit" id="book-remove" style="visibility: hidden;">
                 <div class="x">×</div>
             </div>

@@ -55,7 +55,14 @@ button {
   align-items: center;
 }
 
-.book > .text {
+.book-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.book .text {
   display: flex;
   text-align: center;
 }
@@ -66,7 +73,9 @@ button {
 }
 
 .author {
+  font-size: 0.8rem;
   font-weight: 200;
+  font-style: italic;
 }
 
 .exit {
@@ -240,6 +249,10 @@ button {
 
   .title {
     font-size: 2.4rem;
+  }
+
+  .author {
+    font-size: 1.6rem;
   }
 
   .read {
