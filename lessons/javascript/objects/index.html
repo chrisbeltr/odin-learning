@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="button" id="add-new">Add new book</button>
+    <div class="add-new-wrapper" id="add-new-wrapper">
+        <div class="exit" id="form-exit">
+            <div class="x">×</div>
+        </div>
+        <div class="form-header">Add a new book</div>
+        <form action="#" class="add-new-form" id="add-new-form">
+            <div class="text-input">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="text-input">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div class="checkbox-input">
+                <input type="checkbox" name="read" id="read">
+                <label for="read">Read?</label>
+            </div>
+            <button id="form-submit">Submit</button>
+        </form>
+    </div>
+    <div class="background-darken"></div>
+    <div class="book-grid" id="book-grid">
+        <div class="book" id="book-default">
+            <div class="text title">No books yet...</div>
+            <div class="text author">Add one by clicking "Add new book"</div>
+            <div class="exit" id="book-remove" style="visibility: hidden;">
+                <div class="x">×</div>
+            </div>
+            <div class="read" id="book-read" style="visibility: hidden;">
+                <input type="checkbox" id="read">
+            </div>
+        </div>
+    </div>
+    <script src="./library.js"></script>
+    <!-- <script src="./learning.js"></script> -->
+</body>
+
+</html>
