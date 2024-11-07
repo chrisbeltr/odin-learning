@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotted Line Background</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+        :root {
+            --border-thickness: 100px;
+            --background-color: #86CEFA88;
+            --dash-color: #73B9EE;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background,
+        .background>* {
+            position: absolute;
+        }
+
+        .white-background {
+            top: var(--border-thickness);
+            left: var(--border-thickness);
+            bottom: 0;
+            right: 0;
+            background-color: white;
+        }
+
+        .blue-background {
+            background-color: var(--background-color);
+        }
+
+        .background-vertical {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: var(--border-thickness);
+        }
+
+        .background-horizontal {
+            left: 0;
+            right: 0;
+            top: 0;
+            height: var(--border-thickness);
+        }
+
+        .dashed-vertical {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: var(--border-thickness);
+            border-left: dashed 3px var(--dash-color);
+        }
+
+        .dashed-horizontal {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: var(--border-thickness);
+            border-top: dashed 3px var(--dash-color);
+        }
+
+        .content {
+            padding: var(--border-thickness);
+        }
+
+        .inner-content {
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0 0 20px 0;
+
+            font-family: "Permanent Marker", cursive;
+            font-size: 50px;
+        }
+
+        p {
+            margin: 20px 0;
+
+            font-family: "Indie Flower", cursive;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="blue-background background-horizontal"></div>
+        <div class="blue-background background-vertical"></div>
+        <div class="white-background"></div>
+        <div class="dashed-vertical"></div>
+        <div class="dashed-horizontal"></div>
+    </div>
+
+    <div class="content">
+        <div class="inner-content">
+            <h1>hi</h1>
+            <p>this is my website follow for more bangers</p>
+        </div>
+    </div>
+</body>
+
+</html>
